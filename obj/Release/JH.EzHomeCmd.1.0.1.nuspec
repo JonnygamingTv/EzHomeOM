@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>JH.EzHomeCmd</id>
+    <version>1.0.1</version>
+    <authors>EzHomeOM</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>Simple and easy home plugin. Use 1.0.0 if 1.0.1 does not work. Added a stance value to configuration.</description>
+    <copyright>2023 JonHosting</copyright>
+    <tags>openmod openmod-plugin unturned</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1">
+        <dependency id="OpenMod.Unturned" version="3.2.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\jonat\source\repos\EzHomeOM\bin\Release\net461\EzHomeOM.dll" target="lib\net461\EzHomeOM.dll" />
+  </files>
+</package>

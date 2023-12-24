@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>openmod openmod-plugin unturned</PackageTags>
+    <RootNamespace>EzHomeOM</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateNugetPackage>true</GenerateNugetPackage>
+    <Product>Home</Product>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>nullable</WarningsAsErrors>
+    <NoWarn>$(NoWarn);NU1701;NU1702;CS0436</NoWarn>
+    <LangVersion>9.0</LangVersion>
+    <Version>1.0.1</Version>
+    <InformationalVersion>1.0.1</InformationalVersion>
+    <PackageVersion>1.0.1</PackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenMod.Unturned" Version="3.2.1+1d5dabcb" />
+    <PackageReference Include="Legacy2CPSWorkaround" Version="1.0.0">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net461" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="config.yaml" />
+    <EmbeddedResource Include="translations.yaml" />
+  </ItemGroup>
+
+  <Target Name="ChangeAliasesOfNugetRefs" BeforeTargets="FindReferenceAssembliesForReferences;ResolveReferences">
+    <ItemGroup>
+    </ItemGroup>
+  </Target>
+  
+  <PropertyGroup>
+    <PackageId>JH.EzHomeCmd</PackageId>
+    <PackageDescription>Simple and easy home plugin. Use 1.0.0 if 1.0.1 does not work. Added a stance value to configuration.</PackageDescription>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageAuthor>JGTV</PackageAuthor>
+    <PackageTags>openmod openmod-plugin unturned</PackageTags>
+    <Version>1.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateNugetPackage>true</GenerateNugetPackage>
+    <Copyright>2023 JonHosting</Copyright>
+    <Description>Simple and easy home plugin. Use 1.0.0 if 1.0.1 does not work. Added a stance value to configuration.</Description>  
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+
+</Project>

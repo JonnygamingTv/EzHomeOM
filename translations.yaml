@@ -1,0 +1,13 @@
+# See https://openmod.github.io/openmod-docs/devdoc/concepts/localization.html
+# You can not delete this file even if you do not need translations
+
+plugin_events:
+  plugin_start: "Hello World"
+  plugin_stop: "Good bye :("
+
+command:
+  home: "Teleporting home in 5 seconds! Don't move."
+  home_move: "You moved :("
+  home_dmg: "You were damaged :("
+  home_tp: "Teleporting!"
+  no_home: "No bed m8"
